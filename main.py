@@ -20,7 +20,7 @@ root.set_theme("radiance")         # Sets an available theme
 #
 # Styles - normal, bold, roman, italic, underline, and overstrike.
 
-statusbar = ttk.Label(root, text="Welcome to Melody", relief=SUNKEN, anchor=W, font='Times 10 italic')
+statusbar = ttk.Label(root, text="Welcome to Melodify", relief=SUNKEN, anchor=W, font='Times 10 italic')
 statusbar.pack(side=BOTTOM, fill=X)
 
 # Create the menubar
@@ -60,7 +60,7 @@ subMenu.add_command(label="Exit", command=root.destroy)
 
 
 def about_us():
-    tkinter.messagebox.showinfo('About Melody', 'This is a music player build using Python Tkinter by @attreyabhatt')
+    tkinter.messagebox.showinfo('About Melodify', 'This is a music player build using Python Tkinter by @attreyabhatt')
 
 
 subMenu = Menu(menubar, tearoff=0)
@@ -69,8 +69,8 @@ subMenu.add_command(label="About Us", command=about_us)
 
 mixer.init()  # initializing the mixer
 
-root.title("Melody")
-root.iconbitmap(r'images/melody.ico')
+root.title("Melodify")
+root.iconbitmap(r'images/Melody.ico')
 
 # Root Window - StatusBar, LeftFrame, RightFrame
 # LeftFrame - The listbox (playlist)
@@ -167,7 +167,7 @@ def play_music():
             statusbar['text'] = "Playing music" + ' - ' + os.path.basename(play_it)
             show_details(play_it)
         except:
-            tkinter.messagebox.showerror('File not found', 'Melody could not find the file. Please check again.')
+            tkinter.messagebox.showerror('File not found', 'Melodify could not find the file. Please check again.')
 
 
 def stop_music():
